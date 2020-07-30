@@ -134,6 +134,7 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_SKIP_COMPATIBILITY_CHECK := true
 TW_Y_OFFSET := 52
 TW_H_OFFSET := -52
+PB_TORCH_PATH := "/sys/class/leds/flashlight"
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
