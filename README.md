@@ -15,7 +15,7 @@ The Realme C2 is a budget range smartphone from Realme, announced in April 2019.
 
 **Not working**:
 
-1. Decryption
+1. Decryption (Format data to fix internal)
 
 
 ## Device specifications
@@ -53,11 +53,7 @@ familiar with [Git and Repo](https://source.android.com/source/using-repo.html).
 
 To initialize your local repository using the OMNIROM trees to build TWRP, use a command like this:
 
-    repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-9.0
-
-To initialize a shallow clone, which will save even more space, use a command like this:
-
-    repo init --depth=1 -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-9.0
+    repo init -u git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-9.0
 
 # repo sync
 
@@ -71,7 +67,3 @@ To initialize a shallow clone, which will save even more space, use a command li
 Build the TWRP recovery using below command.
 
     cd <source-dir>; export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch omni_RMX1941-eng; mka recoveryimage
-
-## NOTE
-
-Most of the work here is from internet. Thanks to https://github.com/buddi56.
