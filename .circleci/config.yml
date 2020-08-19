@@ -10,8 +10,8 @@ jobs:
       VENDOR: 'realme'
       CODENAME: 'RMX1941'
       FLAVOR: 'eng'
-      # TEST_BUILD: 'true'
-      PB_OFFICIAL: 'true'
+      TEST_BUILD: 'true'
+      # PB_OFFICIAL: 'true'
       CHANGELOG: |
         - Bringup 3.0 
         - Initial Official Build
