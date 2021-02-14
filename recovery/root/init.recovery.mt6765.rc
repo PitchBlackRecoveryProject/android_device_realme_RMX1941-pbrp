@@ -3,6 +3,7 @@ import /init.recovery.trustonic.rc
 on fs
     install_keyring
     setprop crypto.ready 1
+    write /sys/class/power_supply/usb/otg_switch 1
 
 service keystore_auth /sbin/keystore_auth
     oneshot
