@@ -4,7 +4,7 @@
 /vendor_image           emmc    /dev/block/platform/bootdevice/by-name/vendor
 /data			ext4	/dev/block/platform/bootdevice/by-name/userdata		flags=fileencryption=aes-256-xts
 /cache			ext4	/dev/block/platform/bootdevice/by-name/cache
-/mnt/vendor/persist                ext4    /dev/block/platform/bootdevice/by-name/persist          flags=backup=1;display="Persist";mounttodecrypt
+/persist                ext4    /dev/block/platform/bootdevice/by-name/persist          flags=backup=1;display="Persist";mounttodecrypt
 /proinfo		emmc	/dev/block/platform/bootdevice/by-name/proinfo		flags=display="proinfo";backup=1
 /nvdata			ext4	/dev/block/platform/bootdevice/by-name/nvdata		flags=display="nvdata";backup=1
 /nvram			emmc	/dev/block/platform/bootdevice/by-name/nvram		flags=display="nvram";backup=1;flashimg=1
@@ -22,6 +22,7 @@
 /frp			emmc	/dev/block/platform/bootdevice/by-name/frp		flags=display="frp";backup=1
 /para                   emmc    /dev/block/platform/bootdevice/by-name/para
 /dtbo                   emmc    /dev/block/platform/bootdevice/by-name/dtbo             flags=display="Dtbo";backup=1
+/vbmeta			emmc	/dev/block/platform/bootdevice/by-name/vbmeta		flags=flashimg=1
 
 /external_sd		auto	/dev/block/mmcblk1p1	/dev/block/mmcblk1		flags=display="External SDcard";storage;wipeingui;removable;backup=0
 /usbotg			auto    /dev/block/sda1		/dev/block/sda			flags=display="Usb-Otg";storage;removable;backup=0
