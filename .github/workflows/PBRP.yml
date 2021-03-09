@@ -32,6 +32,12 @@ jobs:
        - name: Auto Adapt Manifest
          run: echo "MANIFEST=https://github.com/PitchBlackRecoveryProject/manifest_pb -b ${GITHUB_REF##*/}" >> $GITHUB_ENV
 
+       - name: Export Vars
+         run: |
+              if [[ ${BUILD_RELEASE_TYPE} == "TEST" ]]; then echo "TEST_BUILD=true"  >> $GITHUB_ENV;fi
+              if [[ ${BUILD_RELEASE_TYPE} == "BETA" ]]; then echo "BETA_BUILD=true"  >> $GITHUB_ENV;fi
+              if [[ ${BUILD_RELEASE_TYPE} == "OFFICIAL" ]]; then echo "PB_OFFICIAL=true"  >> $GITHUB_ENV;fi
+
        - name: Recovery Compilation
          uses: Carbonatedblack/Recovery-Compiler@beta
        
@@ -40,5 +46,4 @@ jobs:
               sudo apt-get update && sudo apt-get install sshpass -y
               export CIRCLE_SHA1=$GITHUB_SHA
               cd $BuildPath 
-              if [[ ! -z "${{ github.event.inputs.DEPLOY_TYPE }}" ]]; then export BUILD_RELEASE_TYPE="TEST" ;fi
               bash vendor/utils/pb_deploy.sh ${BUILD_RELEASE_TYPE} ${VENDOR} ${CODENAME}
