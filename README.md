@@ -11,12 +11,8 @@ The Realme C2 is a budget range smartphone from Realme, announced in April 2019.
 2. Backup and Restore
 3. Flash GSI
 4. Screenshots
-
-**Not working**:
-
-1. Decryption
-2. OTG
-
+5. Decryption
+6. OTG
 
 ## Device specifications
 
@@ -40,35 +36,3 @@ Features| Accelerometer, proximity, compass
 ## Device picture
 
 ![Realme C2](https://assets.mspimages.in/c/tr:w-1000,h-1000,c-at_max/15600-42-2.jpg "Realme C2")
-
-
-
-## Getting Started ##
----------------
-
-To get started with OMNI sources to build TWRP, you'll need to get
-familiar with [Git and Repo](https://source.android.com/source/using-repo.html).
-
-# repo init
-
-To initialize your local repository using the OMNIROM trees to build TWRP, use a command like this:
-
-    repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-9.0
-
-To initialize a shallow clone, which will save even more space, use a command like this:
-
-    repo init --depth=1 -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-9.0
-
-# repo sync
-
- Then to sync up:
-
-    repo sync 
-
-## To Build ##
----------------
-
-Build the TWRP recovery using below command.
-
-    cd <source-dir>; export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch omni_rmx1941-eng; mka recoveryimage
-
