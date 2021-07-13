@@ -18,7 +18,7 @@ The Realme C2 is a budget range smartphone from Realme, announced in April 2019.
 
 Basic   | Spec Sheet
 -------:|:-------------------------
-OS	| Android 9.0 (pie)	
+OS	| Android 9.0 (pie) Updated to Android 10.0	
 CPU     | Octa-core 2.0 GHz Cortex-A53
 Chipset | Mediatek MT6762 Helio P22 (12 nm)
 GPU     | PowerVR GE8320
